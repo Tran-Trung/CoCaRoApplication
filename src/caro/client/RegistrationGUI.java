@@ -1,4 +1,4 @@
-package Client;
+package caro.client;
 
 public class RegistrationGUI extends javax.swing.JFrame {
 
@@ -155,11 +155,6 @@ public class RegistrationGUI extends javax.swing.JFrame {
 
         jM_Register.setText("Đăng ký");
         jM_Register.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        jM_Register.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jM_RegisterMouseClicked(evt);
-            }
-        });
         jMB_RegisLog.add(jM_Register);
 
         jM_Login.setText("Đăng nhập");
@@ -186,10 +181,6 @@ public class RegistrationGUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jM_RegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jM_RegisterMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jM_RegisterMouseClicked
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
