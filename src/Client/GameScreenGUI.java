@@ -1,8 +1,40 @@
 package Client;
 
+import java.awt.Point;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.net.Socket;
+import java.util.Vector;
+
 
 public class GameScreenGUI extends javax.swing.JFrame {
-
+    private int X0 = 20;
+    private int Y0 = 20;
+    private int Width = 20;
+    private int Size = 18;
+    private int currentRow = -1;
+    private int currentColumn = -1;
+    private Point currentPoint = new Point();
+    /**
+     * true là user 1(màu đen) false là user 2(màu đỏ)
+     */
+    private boolean user = false;
+    /**
+     * Vị trí chẵn lưu các điểm đã đánh của user 1 Vị trí lẻ lưu các điểm đã
+     * đánh của user 2
+     */
+    private Vector<Point> checked = new Vector<Point>();
+    Socket socket = null;
+    ObjectInputStream in = null;
+    ObjectOutputStream out = null;
+    Socket socketGame = null;
+    ObjectInputStream inGame = null;
+    ObjectOutputStream outGame = null;
+    boolean isPause = false;
+    /**
+     * true : quân đen đi trước false quân đỏ đi trước
+     */
+    boolean startUser = true;//quân đen đi trước
     public GameScreenGUI() {
         initComponents();
         setSize(700,625);

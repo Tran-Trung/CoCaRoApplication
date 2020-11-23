@@ -20,7 +20,6 @@ public class RegistrationGUI extends javax.swing.JFrame {
         jRbt_Male = new javax.swing.JRadioButton();
         jRbt_Female = new javax.swing.JRadioButton();
         jLb_Birthday = new javax.swing.JLabel();
-        jDC_Birthday = new com.toedter.calendar.JDateChooser();
         jLb_Password = new javax.swing.JLabel();
         jPF_Password = new javax.swing.JPasswordField();
         jPF_RePassword = new javax.swing.JPasswordField();
@@ -63,9 +62,6 @@ public class RegistrationGUI extends javax.swing.JFrame {
 
         jLb_Birthday.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jLb_Birthday.setText("Ngày sinh:");
-
-        jDC_Birthday.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        jDC_Birthday.setPreferredSize(new java.awt.Dimension(170, 20));
 
         jLb_Password.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jLb_Password.setText("Mật khẩu:");
@@ -112,8 +108,7 @@ public class RegistrationGUI extends javax.swing.JFrame {
                             .addComponent(jTF_Username, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPF_Password, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jTF_Mail, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPF_RePassword, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jDC_Birthday, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jPF_RePassword, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(42, 42, 42))))
         );
         jP_ReigisterLayout.setVerticalGroup(
@@ -133,9 +128,7 @@ public class RegistrationGUI extends javax.swing.JFrame {
                     .addComponent(jRbt_Male)
                     .addComponent(jRbt_Female))
                 .addGap(18, 18, 18)
-                .addGroup(jP_ReigisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLb_Birthday)
-                    .addComponent(jDC_Birthday, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLb_Birthday)
                 .addGap(18, 18, 18)
                 .addGroup(jP_ReigisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLb_Password)
@@ -155,11 +148,6 @@ public class RegistrationGUI extends javax.swing.JFrame {
 
         jM_Register.setText("Đăng ký");
         jM_Register.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        jM_Register.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jM_RegisterMouseClicked(evt);
-            }
-        });
         jMB_RegisLog.add(jM_Register);
 
         jM_Login.setText("Đăng nhập");
@@ -187,10 +175,6 @@ public class RegistrationGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jM_RegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jM_RegisterMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jM_RegisterMouseClicked
-
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -201,7 +185,6 @@ public class RegistrationGUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btG_Sex;
-    private com.toedter.calendar.JDateChooser jDC_Birthday;
     private javax.swing.JLabel jLb_Birthday;
     private javax.swing.JLabel jLb_Mail;
     private javax.swing.JLabel jLb_Password;
